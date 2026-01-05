@@ -1,0 +1,53 @@
+# === C++ / CMake Build Artifacts ===
+build/
+bin/
+lib/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.pyd
+*.dll
+*.dylib
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# === Python Environment & Artifacts ===
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env/
+env/
+.venv/
+*.egg-info/
+dist/
+eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+.pytest_cache/
+
+# === Data & Signals (Crucial for Quants) ===
+# We ignore the actual data files to keep the repo light.
+# Teammates should download data separately or use a shared drive.
+*.csv
+*.parquet
+*.h5
+*.hd5
+*.log
+!examples/*.csv  # Exception: keep small example CSVs for demo purposes
+
+# === IDE Specific ===
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store (Mac)
