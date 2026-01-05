@@ -1,0 +1,12 @@
+cmake_minimum_required(VERSION 3.12)
+project(quant_engine)
+
+# Find Pybind11
+find_package(pybind11 REQUIRED)
+
+# Define the C++ module
+pybind11_add_module(core_engine src/main.cpp src/engine.cpp)
+
+# Target the output to the Python package folder
+set_target_properties(core_engine PROPERTIES 
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/quant_engine")
